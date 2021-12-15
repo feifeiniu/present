@@ -3,38 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=yes">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>不要嫌弃写的丑哦 🎄 </title>
+    <title> 手写的圣诞 🎄 </title>
 </head>
 <body>
 <div class="container">
     <div class="scroll">
         <div class="list">
+        <p class="scroll__text">ฅ˙Ꙫ˙ฅ ♥ ጿ</p>
         <p class="scroll__text">亲爱的小刘同志！</p>
-        <p class="scroll__text">在这个美好日子里我要对你表示隆重的祝福</p>
+        <p class="scroll__text">两年前的未完后续</p>
+        <p class="scroll__text">在这个美好日子我要祝福你</p>
         <p class="scroll__text">Merry Christmas!</p>
-        <p class="scroll__text">亲爱的小刘同志！</p>
+        <p class="scroll__text">圣诞快乐！</p>
+        <p class="scroll__text">爱你的小飞飞！</p>
         </div>
     </div>
     <div class="tree">
         <canvas id="c">
             <script src="./main.js"></script>
         </canvas>
-        <audio
-                controls
-                src="../media/yinyue.mp3">
-            Your browser does not support the
-            <code>audio</code> element.
+        <audio  id="x" autoplay="true" src="../media/yinyue.mp3">
+            <script>
+                setInterval(
+                function toggleSound() {
+                    let music = document.getElementById("x");//获取ID
+                    if (music.paused) { //判读是否播放
+                        music.paused = false;
+                        music.play(); //没有就播放
+                    }
+                },100)
+            </script>
         </audio>
     </div>
     <div class="picture">
         <img   src="../images/psc.jfif" alt="背景图片男">
         <img   src="../images/1.png" alt="背景图片女">
     </div>
-
 </div>
-
 </body>
 </html>

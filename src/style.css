@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 .container{
-  /*border: 10px solid black;*/
   position: relative;
   width: 400px;
   height: 100vh;
@@ -13,7 +12,6 @@
                       "tree ."
                       "picture .";
   background: linear-gradient(90deg, rgba(89,3,0,1) 0%, rgba(192,15,0,1) 48%, rgba(89,3,0,1) 100%);
-
 }
 .container > .scroll{
   grid-area: header;
@@ -24,43 +22,80 @@
 .container > .tree{
   grid-area: tree;
 }
-
 .scroll {
     height: 40px;
     line-height:40px;
     overflow: hidden;
     width: 100vw;
-
+    margin-top: 20px;
 }
-
 .list {
-    height: 160px;
-    animation: linearUp 10s linear infinite;
-
+    height: 280px;
+    animation: linearUp 20s linear infinite;
 }
 p {
     height: 40px;
     text-align: center;
+    font-family: "Fira Code";
 }
 
 @keyframes linearUp {
     0% {
-        transform: none;
+        transform: translateY(0);
+    }
+    5% {
+        transform: translateY(0);
+    }
+    10%{
+        transform: translateY(0);
+    }
+    15%{
+        transform: translateY(-40px);
     }
     20% {
         transform: translateY(-40px);
     }
-    40%{
-        transform: translateY(-60px);
-    }
-    60%{
+    35%{
         transform: translateY(-80px);
     }
-    80% {
-        transform: translateY(-100px);
+    40%{
+        transform: translateY(-80px);
+    }
+    45%{
+        transform: translateY(-120px);
+    }
+    50%{
+        transform: translateY(-120px);
+    }
+    55%{
+        transform: translateY(-160px);
+    }
+    60%{
+        transform: translateY(-160px);
+    }
+    65%{
+        transform: translateY(-200px);
+    }
+    70%{
+    transform: translateY(-200px);
+}
+    75%{
+        transform: translateY(-240px);
+    }
+    80%{
+        transform: translateY(-240px);
+    }
+    85%{
+        transform: translateY(-280px);
+    }
+    90%{
+        transform: translateY(-280px);
+    }
+    95%{
+        transform: translateY(-320px);
     }
     100%{
-        transform: translateY(-120px);
+        transform: translateY(-320px);
     }
 }
 
@@ -68,15 +103,9 @@ p {
     width: 100vw;
 }
 .tree{
- /*border: 1px solid green;*/
     display: flex;
     justify-content: center;
     width: 350px;
- position: relative;
 }
-.tree > audio{
-    position:absolute;
-    bottom: 0;
-    left: 0;
-}
+
 
