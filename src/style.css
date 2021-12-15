@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 .container{
-  border: 10px solid black;
+  /*border: 10px solid black;*/
   position: relative;
-  min-width: 400px;
+  width: 400px;
+  height: 100vh;
   display:inline-grid;
   grid-template-areas:"header header "
                       "tree ."
@@ -24,15 +25,50 @@
   grid-area: tree;
 }
 
-.scroll{
-    border:1px solid  blue;
-}
-.picture{
-  border: 1px solid red;
+.scroll {
+    height: 40px;
+    line-height:40px;
+    overflow: hidden;
+    width: 100vw;
+
 }
 
+.list {
+    height: 160px;
+    animation: linearUp 10s linear infinite;
+
+}
+p {
+    height: 40px;
+    text-align: center;
+}
+
+@keyframes linearUp {
+    0% {
+        transform: none;
+    }
+    20% {
+        transform: translateY(-40px);
+    }
+    40%{
+        transform: translateY(-60px);
+    }
+    60%{
+        transform: translateY(-80px);
+    }
+    80% {
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(-120px);
+    }
+}
+
+.picture >img{
+    width: 100vw;
+}
 .tree{
- border: 1px solid green;
+ /*border: 1px solid green;*/
     display: flex;
     justify-content: center;
     width: 350px;
