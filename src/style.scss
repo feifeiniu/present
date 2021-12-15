@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  position: relative;
+  width: 100%;
+  display:inline-grid;
+  grid-template-areas:"header header "
+                        "tree picture ";
+
+}
+.container > .scroll{
+  grid-area: header;
+}
+.container > .snowflake{
+  grid-area:picture ;
+}
+.container > .tree{
+  grid-area: tree;
+}
+
+:root {
+  font-size: calc(20px + (80 - 20) * (100vw - 320px) / (1280 - 320));
+}
+body {
+  background-image: radial-gradient(100% 67% at 50% 50%,#cc1100,#400000);
+  color: #fff;
+  display: flex;
+  font: 1em/1.5 "Oleo Script", sans-serif;
+  height: 25vh;
+}
+.scroll, .scroll__text {
+  width: 100%;
+
+}
+.scroll {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 0.1em 0.1em 0 #111;
+  height: 1.5em;
+}
+.scroll__text {
+  animation: slideUp (2s * 10) ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transform: translateY(100%);
+  @for $i from 1 through 5 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: 2s * ($i - 1);
+    }
+  }
+}
+$movePct: 100% / 10;
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  #{$movePct * 0.5}, #{$movePct} {
+    transform: translateY(0);
+  }
+  #{$movePct * 1.5}, to {
+    transform: translateY(-100%);
+  }
+}
+
+.snowflake{
+
+  transform: scale(0.5);
+  display: flex;
+  justify-content: space-around;
+
+}
+.snowflake > img{
+  height: 100vh;
+}
+
+.tree{
+  position: absolute;
+  top:30%;
+  left:50%
+}
+audio{
+  justify-self: flex-end;
+  align-self: flex-end;
+}
