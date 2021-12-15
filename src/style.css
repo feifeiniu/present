@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  border: 10px solid black;
+  position: relative;
+  width: 100%;
+
+  display:inline-grid;
+  grid-template-areas:"header header "
+                      "tree ."
+                      "picture .";
+  background: linear-gradient(90deg, rgba(89,3,0,1) 0%, rgba(192,15,0,1) 48%, rgba(89,3,0,1) 100%);
+
+}
+.container > .scroll{
+  grid-area: header;
+}
+.container > .picture{
+  grid-area:picture ;
+}
+.container > .tree{
+  grid-area: tree;
+}
+
+.scroll{
+    border:1px solid  blue;
+}
+.picture{
+  border: 1px solid red;
+}
+
+.tree{
+ border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+ position: relative;
+}
+.tree > audio{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+}
+
