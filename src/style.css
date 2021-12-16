@@ -6,7 +6,6 @@
 .container{
   position: relative;
   width: 400px;
-  height: 100vh;
   display:inline-grid;
   grid-template-areas:"header header "
                       "tree ."
